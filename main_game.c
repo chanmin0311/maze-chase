@@ -5,6 +5,6 @@
 
 int main() {
 	InitGameSet();
-	show_menu();
+	ShowMenu();
 	return 0;
 }

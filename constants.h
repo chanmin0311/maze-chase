@@ -13,13 +13,15 @@
 
 // 미로 게임 관련 상수
 #define MAX_SIZE 30
-#define NORTH 1  // 00001
-#define SOUTH 2  // 00010
-#define EAST 4   // 00100
-#define WEST 8   // 01000
-#define VISITED 16  // 10000
-#define END 32      // 100000
-#define START 64    // 1000000
+
+// 해당 상수의 2진수 값
+#define NORTH 1          // 1
+#define SOUTH 2          // 10
+#define EAST 4            // 100
+#define WEST 8           // 1000
+#define VISITED 16      // 10000
+#define END 32           // 100000
+#define START 64        // 1000000
 
 // 색상 코드
 enum COLOR {

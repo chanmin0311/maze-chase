@@ -4,27 +4,28 @@
 #define STDBOOL_H
 #include<stdbool.h>
 
+// 미로 구조체
 typedef struct {
-    int width;
-    int height;
-    int* cells;
+    int width;          // 미로의 가로 길이
+    int height;         // 미로의 세로 길이
+    int* cells;          // cell 
 } Maze;
 
-Maze* create_maze(int width, int height);
-void free_maze(Maze* maze);
-int get_cell(Maze* maze, int x, int y);
-void set_cell(Maze* maze, int x, int y, int value);
-bool in_bounds(Maze* maze, int x, int y);
+Maze* CreateMaze(int width, int height);
+void FreeMaze(Maze* maze);
+int GetCell(Maze* maze, int x, int y);
+void SetCell(Maze* maze, int x, int y, int value);
+bool InBounds(Maze* maze, int x, int y);
 
-void binary_tree_algorithm(Maze* maze);
-void ellers_algorithm(Maze* maze);
-void wilsons_algorithm(Maze* maze);
+void BinaryTreeAlgorithm(Maze* maze);
+void EllersAlgorithm(Maze* maze);
+void WilsonsAlgorithm(Maze* maze);
 
-Maze* generate_maze(int level);
-void print_maze(Maze* maze);
+Maze* GenerateMaze(int level);
+void PrintMaze(Maze* maze);
 
-bool can_move(Maze* maze, int start_x, int start_y, int direction);
+bool CanMove(Maze* maze, int start_x, int start_y, int direction);
 
-void printMazeChase(int x, int y);
+void PrintMazeChase(int x, int y);
 
 #endif
